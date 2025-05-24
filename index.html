@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico.png" type="image/png">
+  <title>Coding Tech | Build Your Online Success</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+    img{
+      width: 80px;
+      height: 50px;
+    }
+    .btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  .hero h1, .hero p {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+.hero h1, .hero p {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .service-card {
+        background: #fff;
+        border: none;
+        padding: 30px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+      background-color: #007bff;
+      color: #fff;
+    }
+    .service-card:hover i, .service-card:hover h5 {
+      color: #fff;
+    }
+    .service-card i {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    #about {
+        background: #f8f9fa;
+        padding: 80px 0;
+    }
+    .cta-section {
+        background: #007bff;
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+    .footer {
+    padding: 50px 20px;
+    background-color: #0d0d1b;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-content h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+  }
+
+  .footer-content p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .footer-button .btn {
+    background-color: #0066ff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .footer hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 40px 0;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-brand {
+    flex: 1;
+    text-align: center;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0066ff;
+  }
+
+  .brand-logo i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #0066ff;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid #0066ff;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0066ff;
+    transition: all 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    background-color: #0066ff;
+    color: #fff;
+  }
+
+  .footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .link-section {
+    flex: 1;
+    text-align: center;
+  }
+
+  .link-section h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #0066ff;
+  }
+
+  .link-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .link-section ul li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #fff;
+  }
+
+  .link-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .link-section ul li a:hover {
+    color: #0066ff;
+  }
+
+  .link-section ul li i {
+    margin-right: 10px;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content h2 {
+    font-size: 28px;
+    }
+
+    .footer-button .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    }
+
+    .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .footer-links {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .link-section {
+    margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-content h2 {
+    font-size: 24px;
+    }
+
+    .footer-content p {
+    font-size: 14px;
+    }
+
+    .footer-button .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    }
+
+    .brand-logo {
+    font-size: 20px;
+    }
+
+    .social-icons a {
+    padding: 8px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background:#fff;">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="index.html" style="font-size: 1.5rem;"> 
+      <img src="logo.png" alt="Logo">Coding Tech
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color:#0066ff;"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNav">
+      <button type="button" class="btn-close text-reset d-lg-none ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Close"></button>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-2">
+          <a class="nav-link text-primary" href="#services" style="font-weight: 600; transition: color 0.3s;">Services</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-primary" href="#about" style="font-weight: 600; transition: color 0.3s;">About</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-primary" href="https://wa.me/+923245620210" style="font-weight: 600; transition: color 0.3s;">Contact</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center ms-lg-3"></div>
+        <a href="https://www.facebook.com/Itz.CodingTech/" target="_blank" class="text-primary mx-2" style="font-size: 1.2rem;"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/its.coding.tech/" target="_blank" class="text-primary mx-2" style="font-size: 1.2rem;"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@Its_codingtech" target="_blank" class="text-primary mx-2" style="font-size: 1.2rem;"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero position-relative d-flex align-items-center justify-content-center text-center" 
+  style="background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover; height: 100vh;">
+  
+  <!-- Overlay -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
+
+  <!-- Content -->
+  <div class="container text-white position-relative z-2" data-aos="fade-up" data-aos-duration="1200">
+    <h1 class="display-4 fw-bold mb-3" style="font-family: 'JetBrains Mono', monospace;" id="typed-text"></h1>
+    <p class="lead mb-4" data-aos="fade-in" data-aos-delay="400">"We craft high-performance, responsive websites that fuel business growth and student success.".</p>
+  <a href="https://wa.me/+923245620210" class="btn btn-primary btn-lg" style="z-index: 2;" data-aos="fade-in" data-aos-delay="600" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i> Chat with Us
+  </a>
+  </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  var typed = new Typed('#typed-text', {
+    strings: [
+      "Build Your Online Success with Coding Tech", 
+      "Your Success is Our Mission"
+    ],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true,
+    showCursor: false // This line disables the blinking cursor
+  });
+</script>
+
+<!-- About Section -->
+<section id="about" style="background: #f8f9fa; padding: 80px 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Image Column -->
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+             alt="About Coding Tech"
+             class="img-fluid rounded shadow-lg"
+             style="width: 100%; height: auto;">
+      </div>
+
+      <!-- Text Column -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="fw-bold text-primary mb-4" style="font-size: 2.5rem;">Who We Are</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+          At <span class="fw-bold text-primary">Coding Tech</span>, we are dedicated to crafting innovative web solutions that empower businesses, entrepreneurs, and students to thrive in the digital world. Our mission is to transform your ideas into visually stunning, high-performing websites that drive success and growth.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+          With a focus on creativity, functionality, and user experience, we ensure that every project we deliver is a masterpiece tailored to your unique needs.
+        </p>
+        <a href="mailto:its.coding.tech@gmail.com" class="btn btn-primary btn-lg mt-4"
+           style="padding: 12px 30px; font-size: 1rem; border-radius: 30px; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">
+          <i class="fa-solid fa-envelope"></i> Mail Us
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="fw-bold text-primary">Our Services</h2>
+      <p>Elevate Your Online Identity <br> I specialize in creating bespoke websites that seamlessly blend aesthetics with functionality. My goal is to craft digital experiences that captivate and engage, tailored to meet your specific needs. Whether it's a portfolio to showcase your talent, a business website to expand your reach, or a complete redesign to modernize your presence, I am dedicated to bringing your vision to life with innovation and expertise. <br> <br>
+      </p>
+        </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h5 class="mt-3 fw-bold ">Portfolio Websites</h5>
+          <p>Showcase your work with a modern and sleek personal website.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <i class="fas fa-briefcase"></i>
+          <h5 class="mt-3 fw-bold ">Business Websites</h5>
+          <p>Professional sites that grow your business and boost credibility.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <i class="fas fa-sync"></i>
+          <h5 class="mt-3 fw-bold ">Website Redesign</h5>
+          <p>Refresh your online presence with a modern, responsive redesign.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h5 class="mt-3 fw-bold">Student Projects</h5>
+          <p>Affordable project development for students to shine academically.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer Start -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="footer-brand">
+      <div class="brand-logo">
+      <span>Coding Tech</span>
+      </div>
+      <div class="social-icons">
+      <a href="https://www.facebook.com/Itz.CodingTech/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/its.coding.tech/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://whatsapp.com/channel/0029Va8O17Q9cDDamHIskr0h" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/@Its_codingtech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="link-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Portfolio Website</a></li>
+          <li><a href="#">Business Website</a></li>
+          <li><a href="#">Redesign Website</a></li>
+          <li><a href="#">Student Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="link-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="link-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i>its.coding.tech@gmail.com</li>
+          <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/+923245620210" style="color: inherit; text-decoration: none; margin-left: 5px;">Chat on WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="text-center text-white py-3">
+    &copy; <script>document.write(new Date().getFullYear());</script> Coding Tech. All rights reserved.
+  </div>
+</footer>
+  
+<!-- Footer End -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
